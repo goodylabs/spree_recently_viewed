@@ -1,21 +1,29 @@
+# encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_recently_viewed'
-  s.version     = '1.1'
+  s.version     = '2.0.3'
   s.summary     = 'Adds recently viewed products to Spree'
   s.authors     = ['Roman Smirnov', 'Brian Quinn']
-  s.email       = 'brian@railsdog.com'
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 1.9.3'
 
-  s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*']
+  # s.homepage  = 'http://www.spreecommerce.com'
+
+  #s.files       = `git ls-files`.split("\n")
+  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.has_rdoc = true
+  s.add_dependency 'spree_core', '~> 2.0.3'
 
-  s.add_dependency('spree_core', '>= 1.0.0')
-
-  s.add_development_dependency 'factory_girl'
-  s.add_development_dependency 'rspec-rails',  ' ~> 2.8.0.rc1'
+  s.add_development_dependency 'capybara', '~> 2.1'
+  s.add_development_dependency 'coffee-rails'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'factory_girl', '~> 4.2'
+  s.add_development_dependency 'ffaker'
+  s.add_development_dependency 'rspec-rails',  '~> 2.13'
+  s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'selenium-webdriver'
+  s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
 end
