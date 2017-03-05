@@ -7,6 +7,7 @@ group :test, :developement do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'json', '~> 1.8.6'
 end
 
 
